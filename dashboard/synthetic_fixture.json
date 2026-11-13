@@ -1,0 +1,416 @@
+{
+  "content_sha256": "4508bd68cd83907a835642075e14fb20c5c11c5ded794358e18397c6a5e38ba0",
+  "payload": {
+    "arm_results": [
+      {
+        "arm": "No E-Mail",
+        "conversion": 10.2941176471,
+        "n": 4216,
+        "spend": 5.17072343454,
+        "visit": 20.4696394687
+      },
+      {
+        "arm": "Mens E-Mail",
+        "conversion": 15.4425182482,
+        "n": 4384,
+        "spend": 7.96388001825,
+        "visit": 25.5018248175
+      },
+      {
+        "arm": "Womens E-Mail",
+        "conversion": 11.8588999768,
+        "n": 4309,
+        "spend": 5.88808308192,
+        "visit": 21.8380134602
+      }
+    ],
+    "metadata": {
+      "arms": [
+        "No E-Mail",
+        "Mens E-Mail",
+        "Womens E-Mail"
+      ],
+      "fixture_id": "day14-email-lab-synthetic-v1",
+      "generator_version": "python-mt19937-cent-v1",
+      "logging_propensity": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "n": 12909,
+      "outcome_definitions": {
+        "conversion": {
+          "probabilities": [
+            0.1,
+            0.16,
+            0.13
+          ],
+          "type": "binary"
+        },
+        "spend": {
+          "buyer_distribution": "exponential",
+          "buyer_mean_usd": 50,
+          "nonbuyer": 0,
+          "resolution_usd": 0.01,
+          "type": "USD"
+        },
+        "visit": {
+          "probabilities": [
+            0.2,
+            0.26,
+            0.23
+          ],
+          "shared_uniform_with_conversion": true,
+          "type": "binary"
+        }
+      },
+      "policy_definitions": {
+        "P0": {
+          "action_probabilities": [
+            1,
+            0,
+            0
+          ],
+          "label": "No E-Mail All"
+        },
+        "P1": {
+          "action_probabilities": [
+            0,
+            1,
+            0
+          ],
+          "label": "Mens E-Mail All"
+        },
+        "P2": {
+          "action_probabilities": [
+            0,
+            0,
+            1
+          ],
+          "label": "Womens E-Mail All"
+        },
+        "P3": {
+          "action_probabilities": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "label": "Uniform Random"
+        }
+      },
+      "schema_version": 1,
+      "seed": 20261109,
+      "source_origin": "SYNTHETIC",
+      "unit_definitions": {
+        "conversion": {
+          "absolute": "%",
+          "incremental": "pp"
+        },
+        "spend": {
+          "absolute": "USD/customer",
+          "incremental": "USD/customer"
+        },
+        "visit": {
+          "absolute": "%",
+          "incremental": "pp"
+        }
+      }
+    },
+    "policy_results": [
+      {
+        "estimate": 10.085986521,
+        "high": 11.0188377939,
+        "holm_family": null,
+        "kind": "absolute",
+        "low": 9.15313524813,
+        "n": 12909,
+        "outcome": "conversion",
+        "p_holm": null,
+        "p_value": null,
+        "policy": "P0",
+        "se": 0.475953272743,
+        "unit": "%"
+      },
+      {
+        "estimate": 15.7332093888,
+        "high": 16.8869026001,
+        "holm_family": null,
+        "kind": "absolute",
+        "low": 14.5795161775,
+        "n": 12909,
+        "outcome": "conversion",
+        "p_holm": null,
+        "p_value": null,
+        "policy": "P1",
+        "se": 0.588629801576,
+        "unit": "%"
+      },
+      {
+        "estimate": 5.64722286777,
+        "high": 7.16236963723,
+        "holm_family": "Primary3",
+        "kind": "incremental",
+        "low": 4.13207609831,
+        "n": 12909,
+        "outcome": "conversion",
+        "p_holm": 8.30958407356e-13,
+        "p_value": 2.76986135785e-13,
+        "policy": "P1",
+        "se": 0.773048270994,
+        "unit": "pp"
+      },
+      {
+        "estimate": 11.8754357425,
+        "high": 12.8845341775,
+        "holm_family": null,
+        "kind": "absolute",
+        "low": 10.8663373075,
+        "n": 12909,
+        "outcome": "conversion",
+        "p_holm": null,
+        "p_value": null,
+        "policy": "P2",
+        "se": 0.514855600917,
+        "unit": "%"
+      },
+      {
+        "estimate": 1.78944922147,
+        "high": 3.18937144185,
+        "holm_family": "Primary3",
+        "kind": "incremental",
+        "low": 0.389527001094,
+        "n": 12909,
+        "outcome": "conversion",
+        "p_holm": 0.0122339937666,
+        "p_value": 0.0122339937666,
+        "policy": "P2",
+        "se": 0.714259155486,
+        "unit": "pp"
+      },
+      {
+        "estimate": 12.5648772174,
+        "high": 13.1366726729,
+        "holm_family": null,
+        "kind": "absolute",
+        "low": 11.993081762,
+        "n": 12909,
+        "outcome": "conversion",
+        "p_holm": null,
+        "p_value": null,
+        "policy": "P3",
+        "se": 0.291737735971,
+        "unit": "%"
+      },
+      {
+        "estimate": 2.47889069641,
+        "high": 3.29880998307,
+        "holm_family": "Primary3",
+        "kind": "incremental",
+        "low": 1.65897140976,
+        "n": 12909,
+        "outcome": "conversion",
+        "p_holm": 6.22213189183e-09,
+        "p_value": 3.11106594591e-09,
+        "policy": "P3",
+        "se": 0.418333853645,
+        "unit": "pp"
+      },
+      {
+        "estimate": 20.0557750407,
+        "high": 21.3484046324,
+        "holm_family": null,
+        "kind": "absolute",
+        "low": 18.763145449,
+        "n": 12909,
+        "outcome": "visit",
+        "p_holm": null,
+        "p_value": null,
+        "policy": "P0",
+        "se": 0.659517012505,
+        "unit": "%"
+      },
+      {
+        "estimate": 25.9818731118,
+        "high": 27.4374779419,
+        "holm_family": null,
+        "kind": "absolute",
+        "low": 24.5262682817,
+        "n": 12909,
+        "outcome": "visit",
+        "p_holm": null,
+        "p_value": null,
+        "policy": "P1",
+        "se": 0.742669172289,
+        "unit": "%"
+      },
+      {
+        "estimate": 5.92609807111,
+        "high": 7.95090188833,
+        "holm_family": "Secondary6",
+        "kind": "incremental",
+        "low": 3.9012942539,
+        "n": 12909,
+        "outcome": "visit",
+        "p_holm": 5.80507318927e-08,
+        "p_value": 9.67512198211e-09,
+        "policy": "P1",
+        "se": 1.03308215517,
+        "unit": "pp"
+      },
+      {
+        "estimate": 21.8684638624,
+        "high": 23.2138683395,
+        "holm_family": null,
+        "kind": "absolute",
+        "low": 20.5230593853,
+        "n": 12909,
+        "outcome": "visit",
+        "p_holm": null,
+        "p_value": null,
+        "policy": "P2",
+        "se": 0.686443469216,
+        "unit": "%"
+      },
+      {
+        "estimate": 1.81268882175,
+        "high": 3.74712807381,
+        "holm_family": "Secondary6",
+        "kind": "incremental",
+        "low": -0.121750430307,
+        "n": 12909,
+        "outcome": "visit",
+        "p_holm": 0.132535845869,
+        "p_value": 0.0662679229343,
+        "policy": "P2",
+        "se": 0.986976938004,
+        "unit": "pp"
+      },
+      {
+        "estimate": 22.6353706716,
+        "high": 23.3572816438,
+        "holm_family": null,
+        "kind": "absolute",
+        "low": 21.9134596995,
+        "n": 12909,
+        "outcome": "visit",
+        "p_holm": null,
+        "p_value": null,
+        "policy": "P3",
+        "se": 0.368328692683,
+        "unit": "%"
+      },
+      {
+        "estimate": 2.57959563096,
+        "high": 3.70588188578,
+        "holm_family": "Secondary6",
+        "kind": "incremental",
+        "low": 1.45330937613,
+        "n": 12909,
+        "outcome": "visit",
+        "p_holm": 2.86214660785e-05,
+        "p_value": 7.15536651962e-06,
+        "policy": "P3",
+        "se": 0.574646403559,
+        "unit": "pp"
+      },
+      {
+        "estimate": 5.06617940971,
+        "high": 5.73550937251,
+        "holm_family": null,
+        "kind": "absolute",
+        "low": 4.39684944692,
+        "n": 12909,
+        "outcome": "spend",
+        "p_holm": null,
+        "p_value": null,
+        "policy": "P0",
+        "se": 0.34150115414,
+        "unit": "USD/customer"
+      },
+      {
+        "estimate": 8.11379270277,
+        "high": 8.9810789341,
+        "holm_family": null,
+        "kind": "absolute",
+        "low": 7.24650647143,
+        "n": 12909,
+        "outcome": "spend",
+        "p_holm": null,
+        "p_value": null,
+        "policy": "P1",
+        "se": 0.442501106231,
+        "unit": "USD/customer"
+      },
+      {
+        "estimate": 3.04761329305,
+        "high": 4.15425438101,
+        "holm_family": "Secondary6",
+        "kind": "incremental",
+        "low": 1.94097220509,
+        "n": 12909,
+        "outcome": "spend",
+        "p_holm": 3.3768035173e-07,
+        "p_value": 6.75360703461e-08,
+        "policy": "P1",
+        "se": 0.564623175063,
+        "unit": "USD/customer"
+      },
+      {
+        "estimate": 5.89629328376,
+        "high": 6.6049907516,
+        "holm_family": null,
+        "kind": "absolute",
+        "low": 5.18759581591,
+        "n": 12909,
+        "outcome": "spend",
+        "p_holm": null,
+        "p_value": null,
+        "policy": "P2",
+        "se": 0.361586984982,
+        "unit": "USD/customer"
+      },
+      {
+        "estimate": 0.830113874041,
+        "high": 1.81400131664,
+        "holm_family": "Secondary6",
+        "kind": "incremental",
+        "low": -0.153773568561,
+        "n": 12909,
+        "outcome": "spend",
+        "p_holm": 0.132535845869,
+        "p_value": 0.0982011626482,
+        "policy": "P2",
+        "se": 0.501992613315,
+        "unit": "USD/customer"
+      },
+      {
+        "estimate": 6.35875513208,
+        "high": 6.78455090884,
+        "holm_family": null,
+        "kind": "absolute",
+        "low": 5.93295935532,
+        "n": 12909,
+        "outcome": "spend",
+        "p_holm": null,
+        "p_value": null,
+        "policy": "P3",
+        "se": 0.217246735203,
+        "unit": "USD/customer"
+      },
+      {
+        "estimate": 1.29257572236,
+        "high": 1.87970291492,
+        "holm_family": "Secondary6",
+        "kind": "incremental",
+        "low": 0.705448529811,
+        "n": 12909,
+        "outcome": "spend",
+        "p_holm": 4.79000609613e-05,
+        "p_value": 1.59666869871e-05,
+        "policy": "P3",
+        "se": 0.299560194567,
+        "unit": "USD/customer"
+      }
+    ]
+  }
+}

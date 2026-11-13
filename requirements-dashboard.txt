@@ -1,0 +1,5 @@
+# Direct dependencies for the Day 14 app and AppTest suite only.
+streamlit==1.67.0
+pandas==3.1.1
+pyarrow==26.0.1
+pytest==8.4.2

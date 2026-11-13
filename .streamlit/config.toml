@@ -1,0 +1,20 @@
+[browser]
+gatherUsageStats = false
+
+[secrets]
+files = []
+
+[server]
+address = "127.0.0.1"
+headless = true
+runOnSave = false
+
+[client]
+toolbarMode = "minimal"
+
+[theme]
+base = "light"
+primaryColor = "#087B71"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F2F6F8"
+textColor = "#12283C"

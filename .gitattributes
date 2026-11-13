@@ -1,0 +1,2 @@
+# Preserve the generated fixture's reproducible byte hash on Windows checkouts.
+dashboard/synthetic_fixture.json text eol=lf
